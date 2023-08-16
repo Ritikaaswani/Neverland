@@ -705,7 +705,7 @@ document.querySelector("#page5>h1").textContent.split("").forEach(function(char)
     trigger:"#page5>h1>span",
     scroller:"#main",
     // markers:true,
-    start:"100% 90%",
+    start:"100% 50%",
     end:"0% 0%",
     scrub:2
   },
@@ -758,3 +758,180 @@ document.querySelector("#page6>h2").textContent.split("").forEach(function(char)
 //   },
 //   y:300
 // })
+tl.from("#navpart1>h4:nth-child(1)",{
+  scrollTrigger:{
+    trigger:"#page2",
+  scroller:"#main",
+  start:"top 70%",
+  end:"top 60%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+
+})
+tl.from("#navpart1>h4:nth-child(2)",{
+  scrollTrigger:{
+    trigger:"#page4",
+  scroller:"#main",
+  start:"top 30%",
+  end:"top 20%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+
+
+},"anim")
+tl.to("#navpart1>h4:nth-child(1)",{
+  scrollTrigger:{
+    trigger:"#page4",
+  scroller:"#main",
+  start:"top 30%",
+  end:"top 20%",
+  scrub:2,
+  // markers:true
+},
+x:-300,},"anim")
+tl.from("#navpart1>h4:nth-child(3)",{
+  scrollTrigger:{
+    trigger:"#text2",
+  scroller:"#main",
+  start:"top 70%",
+  end:"top 60%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart1>h4:nth-child(2)",{
+  scrollTrigger:{
+    trigger:"#text2",
+  scroller:"#main",
+  start:"top 70%",
+  end:"top 60%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart1>h4:nth-child(3)",{
+  scrollTrigger:{
+    trigger:"#text3",
+  scroller:"#main",
+  start:"top 90%",
+  end:"top 80%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.from("#navpart1>h4:nth-child(4)",{
+  scrollTrigger:{
+    trigger:"#text3",
+  scroller:"#main",
+  start:"top 90%",
+  end:"top 80%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart1>h4:nth-child(4)",{
+  scrollTrigger:{
+    trigger:"#logo-container",
+  scroller:"#main",
+  start:"top 50%",
+  end:"top 40%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.from("#navpart1>h4:nth-child(5)",{
+  scrollTrigger:{
+    trigger:"#logo-container",
+  scroller:"#main",
+  start:"top 50%",
+  end:"top 40%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart1>h4:nth-child(5)",{
+  scrollTrigger:{
+    trigger:"#page5>h1",
+  scroller:"#main",
+  start:"top 10%",
+  end:"top 0%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.from("#navpart1>h4:nth-child(6)",{
+  scrollTrigger:{
+    trigger:"#page5>h1",
+  scroller:"#main",
+  start:"top 10%",
+  end:"top 0%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart1>h4:nth-child(6)",{
+  scrollTrigger:{
+    trigger:"#page6",
+  scroller:"#main",
+  start:"2% 0",
+  end:"15% 0",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.from("#navpart1>h4:nth-child(7)",{
+  scrollTrigger:{
+    trigger:"#page6",
+  scroller:"#main",
+  start:"2% 0",
+  end:"15% 0",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart1>h4:nth-child(7)",{
+  scrollTrigger:{
+    trigger:"#page7",
+  scroller:"#main",
+  start:"top 30%",
+  end:"top 20%",
+  scrub:2,
+  // markers:true
+},
+x:-300,
+},"a")
+tl.to("#navpart2>svg",{
+  scrollTrigger:{
+    trigger:"#page7",
+  scroller:"#main",
+  start:"top 30%",
+  end:"top 20%",
+  scrub:2,
+  // markers:true
+},
+opacity:0,
+},"a")
+
+// *********Custom-cursor***********
+var main= document.querySelector("#main")
+var cursor= document.querySelector("#cursor")
+main.addEventListener("mousemove",function(dets){
+  cursor.style.left = `${dets.x + 30}px`
+  cursor.style.top = `${dets.y}px`
+})
+
+
